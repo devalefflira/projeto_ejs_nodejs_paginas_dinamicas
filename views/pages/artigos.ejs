@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!--18) Criar o título e a descrição do artigo-->
+    <% if (article) { %>
+    <h1><%= article.title %></h1>
+    <p><%= article.description %></p>
+    <% } else { %>
+    <h1>Artigo não encontrado</h1>
+    <% } %>
+    <!--19) Volte até o index.js-->
+
+    <!--Incluindo o template do footer-->
+    <%- include('../layout/footer.ejs') %>
+  </body>
+</html>

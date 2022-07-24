@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    EJS
+    <!-- 14) Criação de lista dos artigos, usando o for para percorrer o array de artigos -->
+    <ul>
+      <% for(let i = 0; i < articles.length; i++) { %>
+      <li>
+        <a href="./artigos/<%=articles[i].id%>"><%= articles[i].title %></a>
+      </li>
+      <% }; %>
+    </ul>
+    <!--15) Volte para o index.js para criar a rota dinâmica-->
+
+    <!--Incluindo o template do footer-->
+    <%- include('../layout/footer.ejs') %>
+  </body>
+</html>
